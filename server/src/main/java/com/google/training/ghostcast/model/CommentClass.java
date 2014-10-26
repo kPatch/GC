@@ -1,8 +1,11 @@
 package com.google.training.ghostcast.model;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 
+@Entity
 public class CommentClass {
 	
-	public String comment_id;
+	@Id String comment_id;
 	public String user_id;
 	public String text;
 	public String upload_id;

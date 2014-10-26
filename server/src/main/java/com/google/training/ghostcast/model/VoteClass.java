@@ -1,12 +1,15 @@
 package com.google.training.ghostcast.model;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 
+@Entity
 public class VoteClass {
 	
-	public String vote_id;
-	public String post_comment_id;
-	public String user_id;
-	public int upvote_count;
-	public int downvote_count;
+	@Id String vote_id;
+	String post_comment_id;
+	String user_id;
+    int upvote_count;
+	int downvote_count;
 	
 	public VoteClass() {
 		
