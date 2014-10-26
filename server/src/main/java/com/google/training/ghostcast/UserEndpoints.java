@@ -8,10 +8,10 @@ import com.google.api.server.spi.config.Named;
 /**
  * Defines endpoint functions APIs.
  */
-@Api(name = "helloworldendpoints", version = "v1",
+@Api(name = "usersendpoints", version = "v1",
 scopes = {Constants.EMAIL_SCOPE },
         clientIds = {Constants.WEB_CLIENT_ID, Constants.API_EXPLORER_CLIENT_ID },
-        description = "API for hello world endpoints.")
+        description = "API for Users endpoints.")
 
 public class UserEndpoints {
 
