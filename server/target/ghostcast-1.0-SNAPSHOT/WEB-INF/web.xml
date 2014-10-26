@@ -4,7 +4,7 @@
         <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
         <init-param>
             <param-name>services</param-name>
-            <param-value>com.google.training.ghostcast.HelloWorldEndpoints</param-value>
+            <param-value>com.google.training.ghostcast.UserEndpoints</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

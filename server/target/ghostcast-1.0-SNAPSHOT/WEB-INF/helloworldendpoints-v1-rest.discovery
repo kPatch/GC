@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"koCc_mmAOJe4d9CoedmJUnZeEcg/PH7Zu3h5cA1LLfeIaU7RqSW2368\"",
+ "etag": "\"koCc_mmAOJe4d9CoedmJUnZeEcg/DmiyGMs8YOrxuQH7zKXShHv6fHg\"",
  "discoveryVersion": "v1",
  "id": "helloworldendpoints:v1",
  "name": "helloworldendpoints",
@@ -11,9 +11,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://your-app-id.appspot.com/_ah/api/helloworldendpoints/v1/",
+ "baseUrl": "https://esoteric-lodge-745.appspot.com/_ah/api/helloworldendpoints/v1/",
  "basePath": "/_ah/api/helloworldendpoints/v1/",
- "rootUrl": "https://your-app-id.appspot.com/_ah/api/",
+ "rootUrl": "https://esoteric-lodge-745.appspot.com/_ah/api/",
  "servicePath": "helloworldendpoints/v1/",
  "batchPath": "batch",
  "parameters": {
@@ -71,8 +71,8 @@
   }
  },
  "schemas": {
-  "HelloClass": {
-   "id": "HelloClass",
+  "UserClass": {
+   "id": "UserClass",
    "type": "object",
    "properties": {
     "message": {
@@ -82,21 +82,10 @@
   }
  },
  "methods": {
-  "sayHello": {
-   "id": "helloworldendpoints.sayHello",
-   "path": "sayHello",
-   "httpMethod": "GET",
-   "response": {
-    "$ref": "HelloClass"
-   },
-   "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email"
-   ]
-  },
-  "sayHelloByName": {
-   "id": "helloworldendpoints.sayHelloByName",
-   "path": "sayHelloByName",
-   "httpMethod": "GET",
+  "createUser": {
+   "id": "helloworldendpoints.createUser",
+   "path": "create",
+   "httpMethod": "POST",
    "parameters": {
     "name": {
      "type": "string",
@@ -108,7 +97,39 @@
     "name"
    ],
    "response": {
-    "$ref": "HelloClass"
+    "$ref": "UserClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "fetchUsers": {
+   "id": "helloworldendpoints.fetchUsers",
+   "path": "fetchUsers/{name}",
+   "httpMethod": "GET",
+   "parameters": {
+    "name": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "name"
+   ],
+   "response": {
+    "$ref": "UserClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "sayHello": {
+   "id": "helloworldendpoints.sayHello",
+   "path": "sayHello",
+   "httpMethod": "GET",
+   "response": {
+    "$ref": "UserClass"
    },
    "scopes": [
     "https://www.googleapis.com/auth/userinfo.email"

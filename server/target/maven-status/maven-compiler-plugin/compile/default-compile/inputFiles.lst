@@ -1,3 +1,7 @@
-/home/tobi/ud859/Lesson_2/000_Hello_Endpoints/src/main/java/com/google/training/helloworld/HelloClass.java
-/home/tobi/ud859/Lesson_2/000_Hello_Endpoints/src/main/java/com/google/training/helloworld/HelloWorldEndpoints.java
-/home/tobi/ud859/Lesson_2/000_Hello_Endpoints/src/main/java/com/google/training/helloworld/Constants.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/Constants.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/model/PostClass.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/model/UserClass.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/model/CommentClass.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/UserEndpoints.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/model/UploadClass.java
+/home/tobi/GhostCast/server/src/main/java/com/google/training/ghostcast/model/VoteClass.java

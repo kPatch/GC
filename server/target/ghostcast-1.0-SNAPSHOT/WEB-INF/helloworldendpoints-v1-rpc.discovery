@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"koCc_mmAOJe4d9CoedmJUnZeEcg/PH7Zu3h5cA1LLfeIaU7RqSW2368\"",
+ "etag": "\"koCc_mmAOJe4d9CoedmJUnZeEcg/DmiyGMs8YOrxuQH7zKXShHv6fHg\"",
  "discoveryVersion": "v1",
  "id": "helloworldendpoints:v1",
  "name": "helloworldendpoints",
@@ -11,8 +11,8 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rpc",
- "rootUrl": "https://your-app-id.appspot.com/_ah/api/",
- "rpcUrl": "https://your-app-id.appspot.com/_ah/api/rpc",
+ "rootUrl": "https://esoteric-lodge-745.appspot.com/_ah/api/",
+ "rpcUrl": "https://esoteric-lodge-745.appspot.com/_ah/api/rpc",
  "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {
@@ -69,8 +69,8 @@
   }
  },
  "schemas": {
-  "HelloClass": {
-   "id": "HelloClass",
+  "UserClass": {
+   "id": "UserClass",
    "type": "object",
    "properties": {
     "message": {
@@ -80,18 +80,26 @@
   }
  },
  "methods": {
-  "helloworldendpoints.sayHello": {
-   "id": "helloworldendpoints.sayHello",
-   "allowGet": true,
+  "helloworldendpoints.createUser": {
+   "id": "helloworldendpoints.createUser",
+   "parameters": {
+    "name": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "name"
+   ],
    "returns": {
-    "$ref": "HelloClass"
+    "$ref": "UserClass"
    },
    "scopes": [
     "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
-  "helloworldendpoints.sayHelloByName": {
-   "id": "helloworldendpoints.sayHelloByName",
+  "helloworldendpoints.fetchUsers": {
+   "id": "helloworldendpoints.fetchUsers",
    "allowGet": true,
    "parameters": {
     "name": {
@@ -103,7 +111,17 @@
     "name"
    ],
    "returns": {
-    "$ref": "HelloClass"
+    "$ref": "UserClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "helloworldendpoints.sayHello": {
+   "id": "helloworldendpoints.sayHello",
+   "allowGet": true,
+   "returns": {
+    "$ref": "UserClass"
    },
    "scopes": [
     "https://www.googleapis.com/auth/userinfo.email"
