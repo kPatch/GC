@@ -3,6 +3,7 @@ package com.google.training.ghostcast.model;
 import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Cache;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,6 +11,8 @@ import java.util.List;
 
 
 @Entity
+@Cache
+
 public class PostClass {
 	
 	  @Id String postId;
